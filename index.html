@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>320 N Vermont Ave | Development Site BOV | LAAA Team</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#f4f5f7;color:#1a1a1a;font-size:15px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{background:linear-gradient(135deg,#0a2540,#143b6b);color:#fff;border-bottom:4px solid #b8985a;padding:44px 0 36px}
+.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:12px;color:#b8985a;font-weight:700;margin-bottom:10px}
+header h1{font-size:34px;font-weight:700;line-height:1.15;margin-bottom:8px}
+header .subtitle{font-size:16px;color:#cbd5e1;margin-bottom:18px}
+header .meta{font-size:13px;color:#9fb3cd;display:flex;flex-wrap:wrap;gap:6px 22px}
+nav.toc{background:#0a2540;border-bottom:1px solid #1a365a;position:sticky;top:0;z-index:50;box-shadow:0 2px 4px rgba(0,0,0,0.15)}
+nav.toc .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:0;padding:0 24px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav.toc a{color:#cbd5e1;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:14px 16px;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;white-space:nowrap}
+nav.toc a:hover{color:#b8985a;border-bottom-color:#b8985a}
+nav.toc a.first{padding-left:0}
+@media (max-width:760px){nav.toc a{font-size:11px;padding:12px 10px;letter-spacing:0.4px}}
+section[id]{scroll-margin-top:60px}
+main{padding:28px 0 8px}
+section.card{background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(10,37,64,0.08);padding:28px 30px;margin-bottom:26px}
+section.card h2{color:#0a2540;font-size:22px;padding-bottom:10px;border-bottom:2px solid #b8985a;margin-bottom:18px}
+section.card h3{color:#0a2540;font-size:16px;margin:22px 0 10px}
+p{margin-bottom:12px}
+.stat-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0 6px}
+.stat{background:#f8fafc;border:1px solid #e6e9ef;border-left:3px solid #b8985a;border-radius:6px;padding:12px 14px}
+.stat .l{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:4px}
+.stat .v{font-size:18px;font-weight:700;color:#0a2540;line-height:1.25}
+.stat .s{font-size:12px;color:#666;margin-top:2px}
+.hero-frame{border-radius:8px;overflow:hidden;margin:6px 0 16px;background:#0a2540;aspect-ratio:16/9}
+.hero-frame img{width:100%;height:100%;object-fit:contain;display:block}
+.img-frame{border-radius:8px;overflow:hidden;background:#0a2540}
+.img-frame img{width:100%;height:100%;object-fit:contain;display:block}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.two-col .img-frame.sv{aspect-ratio:8/5}
+.caption{font-size:12px;color:#666;margin-top:6px}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.spec{background:#f8fafc;border:1px solid #e6e9ef;border-radius:6px;padding:12px 16px;font-size:13.5px}
+.spec b{display:block;color:#0a2540;font-size:12px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 6px}
+th{background:#0a2540;color:#fff;text-align:left;padding:10px 12px;font-size:12px;text-transform:uppercase;letter-spacing:0.6px;white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid #e6e9ef;vertical-align:top}
+tr:nth-child(even) td{background:#f8fafc}
+td.num,th.num{text-align:right;white-space:nowrap}
+.psf{font-weight:700;color:#0a2540;white-space:nowrap}
+.psf.hot{color:#c0392b}
+tr.avg td{background:#eef2f7;font-weight:700;color:#0a2540;border-top:2px solid #0a2540}
+.table-scroll{overflow-x:auto}
+.b-closed{background:#e6f4ea;color:#1e7e34;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap}
+.fn{font-size:12px;color:#666;margin-top:8px}
+.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:18px 0 8px}
+.path-card{border:1px solid #e6e9ef;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.path-card .ph{padding:16px 18px;color:#fff}
+.path-card.pa .ph{background:linear-gradient(135deg,#0a2540,#143b6b)}
+.path-card.pb .ph{background:linear-gradient(135deg,#3a4a6b,#5a6f9a)}
+.path-card.pc .ph{background:linear-gradient(135deg,#5a4a1f,#8a6f2a)}
+.path-card.pd .ph{background:linear-gradient(135deg,#1f5e3a,#2f8a55)}
+.path-card.pe .ph{background:linear-gradient(135deg,#1f4e5e,#2f7a8a)}
+.path-card.pf .ph{background:linear-gradient(135deg,#4a2f5e,#6f4a8a)}
+.path-card.pg .ph{background:linear-gradient(135deg,#2d6a4f,#40916c)}
+.path-card.ph2 .ph{background:linear-gradient(135deg,#7a3b2e,#a0523d)}
+.path-card .ph .ptag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;opacity:.88;margin-bottom:6px}
+.path-card .ph .pname{font-size:18px;font-weight:700;line-height:1.2}
+.path-card .ph .punits{font-size:13px;opacity:.92;margin-top:4px}
+.path-card .pb-body{padding:16px 20px;font-size:13.5px;flex:1}
+.path-card .pb-body ul{margin:0 0 0 18px}
+.path-card .pb-body li{margin-bottom:7px;line-height:1.55}
+.path-card .pmetric{display:flex;justify-content:space-between;padding:9px 20px;border-top:1px solid #e6e9ef;font-size:12.5px}
+.path-card .pmetric .l{color:#666}
+.path-card .pmetric .v{font-weight:700;color:#0a2540}
+.info-callout{background:#f8fafc;border:1px solid #e6e9ef;border-left:4px solid #b8985a;border-radius:6px;padding:14px 18px;font-size:13.5px;margin:14px 0}
+.info-callout a{color:#8a6f2a;font-weight:700}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0}
+.tk{background:#f8fafc;border:1px solid #e6e9ef;border-left:4px solid #b8985a;border-radius:6px;padding:16px 18px;font-size:13.5px}
+.tk .n{display:inline-block;background:#0a2540;color:#fff;border-radius:50%;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:700;margin-bottom:8px}
+.tk b{color:#0a2540}
+.recommend{background:linear-gradient(135deg,#8a6f2a,#b8985a);border-radius:8px;color:#fff;padding:26px 28px;margin:18px 0}
+.recommend .r-eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;opacity:.9;margin-bottom:6px}
+.recommend .r-band{font-size:30px;font-weight:800;line-height:1.2}
+.recommend .r-sub{font-size:14px;opacity:.95;margin-top:6px}
+.price-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0 4px}
+.pc-box{background:#f8fafc;border:1px solid #e6e9ef;border-radius:6px;padding:14px 16px}
+.pc-box .l{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:4px}
+.pc-box .v{font-size:19px;font-weight:700;color:#0a2540}
+.pc-box .s{font-size:12px;color:#666;margin-top:3px}
+.plat-strip{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.plat{background:#f8fafc;border:1px solid #e6e9ef;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0a2540;white-space:nowrap}
+.inv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:16px 0}
+a.inv-item{display:flex;flex-direction:column;background:#f8fafc;border:1px solid #e6e9ef;border-left:4px solid #b8985a;border-radius:6px;padding:16px 18px;text-decoration:none;color:#1a1a1a;transition:box-shadow .15s}
+a.inv-item:hover{box-shadow:0 3px 10px rgba(10,37,64,.18)}
+.inv-item .addr{font-weight:700;color:#0a2540;font-size:15px}
+.inv-item .city{font-size:12.5px;color:#666;margin-bottom:6px}
+.inv-item .price{font-size:17px;font-weight:800;color:#0a2540}
+.inv-item .facts{font-size:12.5px;color:#666;margin:3px 0 8px}
+.inv-item .desc{font-size:13px;line-height:1.5;flex:1}
+.inv-item .go{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:#8a6f2a;text-transform:uppercase;letter-spacing:.8px}
+.team-leaders{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.leader{background:#f8fafc;border:1px solid #e6e9ef;border-radius:8px;padding:22px;text-align:center}
+.headshot-img-lg{width:100px;height:100px;border-radius:50%;border:3px solid #b8985a;object-fit:cover;background:#0a2540;display:block;margin:0 auto 12px}
+.leader .nm{font-size:17px;font-weight:700;color:#0a2540}
+.leader .tt{font-size:13px;color:#666;margin:2px 0 8px}
+.leader .ct{font-size:13px;color:#1a1a1a}
+.team-roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.roster-card{background:#f8fafc;border:1px solid #e6e9ef;border-radius:8px;padding:14px 10px;text-align:center}
+.roster-card .headshot-img-lg{width:72px;height:72px;border-width:2px;margin-bottom:10px}
+.roster-card .nm{font-size:13.5px;font-weight:700;color:#0a2540;line-height:1.3}
+.roster-card .tt{font-size:11.5px;color:#666;margin-top:2px}
+footer{background:#0a2540;border-top:4px solid #b8985a;color:#9fb3cd;padding:30px 0;font-size:12.5px;margin-top:34px}
+footer .f-title{color:#fff;font-weight:700;font-size:14px;margin-bottom:6px}
+footer p{margin-bottom:10px;line-height:1.55}
+@media (max-width:760px){header h1{font-size:26px}.two-col{grid-template-columns:1fr}.team-leaders{grid-template-columns:1fr}section.card{padding:22px 18px}}
+@media (max-width:640px){header h1{font-size:22px}.recommend .r-band{font-size:24px}}
+.hl-banner{background:linear-gradient(135deg,#1f5e3a,#2f8a55);color:#fff;border-radius:8px;padding:18px 22px;margin:4px 0 18px;border-left:6px solid #b8985a}
+.hl-banner .t{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;opacity:.9;margin-bottom:4px}
+.hl-banner .h{font-size:20px;font-weight:800;line-height:1.3}
+.hl-banner .s{font-size:13.5px;opacity:.95;margin-top:6px}
+.hl-banner a{color:#fff;text-decoration:underline}
+.stat.green{border-left-color:#2f8a55;background:#eef7f1}
+header .badge{display:inline-block;background:#2f8a55;color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;padding:4px 10px;margin:0 6px 14px 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Broker Opinion of Value</div>
+    <h1>320 N Vermont Avenue &amp; 321 N Juanita Avenue</h1>
+    <div><span class="badge">Steps from Vermont/Beverly Metro</span><span class="badge">HUD Qualified Census Tract</span></div>
+    <div class="subtitle">20,517 SF two-parcel development site, C2-1 and R4-1, in the Vermont/Western SNAP &middot; East Hollywood / Rampart Village, Los Angeles, CA 90004</div>
+    <div class="meta">
+      <span>Prepared for: Hubbard College of Administration</span>
+      <span>Prepared by: The LAAA Team &middot; Marcus &amp; Millichap</span>
+      <span>October 16, 2026</span>
+    </div>
+    <div class="hero-frame" style="margin:24px 0 0;border:1px solid rgba(184,152,90,.5)"><img src="images/hero_aerial.png" alt="Aerial view of 320 N Vermont Ave and 321 N Juanita Ave outlined in gold"></div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a class="first" href="#summary">Summary</a>
+    <a href="#subject">Subject</a>
+    <a href="#location">Location</a>
+    <a href="#pathways">Pathways</a>
+    <a href="#comps">Comps</a>
+    <a href="#takeaways">Takeaways</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#marketing">Marketing</a>
+    <a href="#listings">Listings</a>
+    <a href="#team">Team</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<section class="card" id="summary">
+  <h2>Executive Summary</h2>
+  <div class="hl-banner">
+    <div class="t">Transit Site</div>
+    <div class="h">About 120 feet from the Vermont/Beverly Metro B Line station</div>
+    <div class="s">The site's southwest corner sits roughly 120 feet from the station entrance at Vermont Avenue and Beverly Boulevard. That puts it inside a Transit Priority Area with no required parking under AB 2097 and in the strongest incentive tiers of the City's housing programs.</div>
+  </div>
+  <p>320 N Vermont Avenue and 321 N Juanita Avenue are two contiguous parcels totaling <b>20,517 SF</b>, both owned by Hubbard College of Administration. The Vermont parcel (12,999 SF, <b>C2-1</b>) is improved with the College's four-story, 25,100 SF building, built in 1962 and renovated in 2001. The Juanita parcel (7,518 SF, <b>R4-1</b>) is unimproved. The two lots share a 50-foot rear lot line and form an L-shaped through-lot with frontage on both streets.</p>
+  <p>Both parcels are in <b>Subarea C (Community Center)</b> of the Vermont/Western Station Neighborhood Area Plan, which allows R4 residential and commercial uses on either lot. Eight development pathways apply, from about 51 units by right, to about 110 to 115 units under the City's Mixed Income Incentive Program, and a 100% affordable building of roughly 130 to 180 units. Across Vermont, an affordable developer bought 315 N Vermont in January 2025 at $322 per land SF and has filed a 113-unit, 12-story building. We recommend a list price of <b>$6,250,000</b> ($304.63 per land SF).</p>
+  <div class="stat-band">
+    <div class="stat"><div class="l">Combined Lot</div><div class="v">20,517 SF</div><div class="s">0.47 acres, two parcels</div></div>
+    <div class="stat"><div class="l">Zoning</div><div class="v">C2-1 / R4-1</div><div class="s">SNAP Subarea C</div></div>
+    <div class="stat green"><div class="l">Transit</div><div class="v">~120 ft</div><div class="s">Vermont/Beverly B Line</div></div>
+    <div class="stat green"><div class="l">HUD</div><div class="v">QCT</div><div class="s">2026 and 2027</div></div>
+    <div class="stat"><div class="l">Mixed Income</div><div class="v">~110-115 units</div><div class="s">CHIP MIIP</div></div>
+    <div class="stat"><div class="l">List Price</div><div class="v">$6,250,000</div><div class="s">$304.63 per land SF</div></div>
+  </div>
+</section>
+
+<section class="card" id="subject">
+  <h2>Subject Property</h2>
+  <div class="hero-frame"><img src="images/hero_aerial.png" alt="Aerial view of the two parcels outlined in gold"></div>
+  <div class="caption" style="margin-top:-8px;margin-bottom:12px">The two parcels outlined in gold: 320 N Vermont at left with the College building and its parking, 321 N Juanita at right. Vermont Avenue runs along the left edge.</div>
+  <div class="spec-grid">
+    <div class="spec"><b>Addresses</b>320 N Vermont Ave and 321 N Juanita Ave, Los Angeles, CA 90004</div>
+    <div class="spec"><b>APNs</b>5501-001-012 (Vermont) &middot; 5501-001-005 (Juanita)</div>
+    <div class="spec"><b>Lot Size</b>12,999 + 7,518 SF = 20,517 SF (0.47 acres). Vermont about 100 ft x 130 ft; Juanita about 50 ft x 150 ft</div>
+    <div class="spec"><b>Zoning</b>C2-1 (Vermont) and R4-1 (Juanita) &middot; General Plan: Neighborhood Office Commercial</div>
+    <div class="spec"><b>Specific Plan</b>Vermont/Western Station Neighborhood Area Plan, Subarea C (Community Center), both parcels</div>
+    <div class="spec"><b>Transit</b>Transit Priority Area &middot; AB 2097 (no required parking) &middot; TOC Tier 4 &middot; MIIP Transit Oriented Incentive Area T-3</div>
+    <div class="spec"><b>Existing Improvements</b>Four-story, 25,100 SF college building (1962, renovated 2001) on Vermont; Juanita parcel unimproved</div>
+    <div class="spec"><b>Housing Protections</b>Not RSO, no Ellis Act withdrawal, no housing use in the last five years (ZIMAS)</div>
+    <div class="spec"><b>Housing Element</b>Both parcels are Housing Element sites (ZI-2512); the Vermont parcel is also a prior-cycle site (ZI-2535)</div>
+    <div class="spec"><b>Jurisdiction</b>City of Los Angeles &middot; Council District 13 &middot; Wilshire Community Plan &middot; Rampart Village Neighborhood Council</div>
+  </div>
+  <div class="two-col">
+    <div>
+      <div class="img-frame sv"><img src="images/street_view.jpg" alt="The College building on Vermont Avenue"></div>
+      <div class="caption">320 N Vermont Avenue frontage</div>
+    </div>
+    <div>
+      <div class="img-frame sv"><img src="images/street_view_juanita.jpg" alt="The Juanita Avenue frontage looking west toward the College building"></div>
+      <div class="caption">From Juanita Avenue, looking west toward the College building</div>
+    </div>
+  </div>
+</section>
+
+<section class="card" id="location">
+  <h2>Location and Designations</h2>
+  <div class="tk-grid">
+    <div class="tk"><span class="n">1</span><br><b>At the station.</b> The Vermont/Beverly B Line station is about 120 feet from the site's southwest corner. Wilshire/Vermont (B and D Lines) is about one mile south, and the 101 Freeway is two blocks north. The block scores 91 for walkability (Walk Score).</div>
+    <div class="tk"><span class="n">2</span><br><b>HUD Qualified Census Tract.</b> Tract 1927 is a QCT for 2026 and 2027, and ZIP 90004 is a Small Area Difficult Development Area on HUD's 2027 list. A tax-credit project here can increase its eligible basis by up to 30%, which raises the credit equity the same project can attract.</div>
+    <div class="tk"><span class="n">3</span><br><b>An affordable housing corridor.</b> Across Juanita, a 72-unit permanent supportive housing building received its Certificate of Occupancy in October 2026. Across Vermont, Holos Communities has filed a 113-unit affordable building at 315 N Vermont.</div>
+  </div>
+  <div class="img-frame" style="aspect-ratio:16/9;margin-top:6px"><img src="images/context_aerial.png" alt="Neighborhood aerial context"></div>
+  <div class="caption">Neighborhood context: Vermont Avenue and Beverly Boulevard, between East Hollywood and Koreatown</div>
+  <div class="info-callout"><strong>Sources:</strong> ZIMAS Parcel Profile Reports, October 16, 2026 &middot; <a href="https://www.huduser.gov/portal/datasets/qct.html" target="_blank" rel="noopener">HUD 2026 and 2027 QCT and Small Area DDA designations</a> &middot; LA Metro rail GTFS (station location) &middot; LADBS permit 21010-10000-03562 (supportive housing building). The 2026 TCAC/HCD Opportunity Map places the tract in the Moderate Resource category.</div>
+</section>
+
+<section class="card" id="pathways">
+  <h2>Development Pathways</h2>
+  <p>SNAP Subarea C, the site's Tier 4 transit location and the City's 2025 Citywide Housing Incentive Program (CHIP) give a buyer eight distinct ways to use the site, from a by-right mixed-use building to a 100% affordable tower to keeping the existing building. Unit counts are planning-level estimates on the combined 20,517 SF, to be confirmed by the buyer's architect and land-use counsel.</p>
+  <div class="path-grid">
+    <div class="path-card pa">
+      <div class="ph">
+        <div class="ptag">Pathway A &middot; By Right</div>
+        <div class="pname">SNAP Mixed-Use</div>
+        <div class="punits">About 51 units</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>R4 density of one unit per 400 SF across both parcels, with ground-floor commercial allowed on Vermont.</li>
+        <li>Mixed-use projects get 3.0:1 FAR and 75 feet, plus SNAP's 15% FAR bonus for lot assemblies of 10,000 to 40,000 SF (about 3.45:1).</li>
+        <li>No affordable set-aside and no discretionary hearing.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~51</span></div>
+      <div class="pmetric"><span class="l">Affordable</span><span class="v">None required</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Market-rate builder</span></div>
+    </div>
+    <div class="path-card pb">
+      <div class="ph">
+        <div class="ptag">Pathway B &middot; Transit Bonus</div>
+        <div class="pname">TOC Tier 4</div>
+        <div class="punits">About 92 to 94 units</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>An 80% density increase, FAR up to about 4.35:1 inside the specific plan, and up to 33 additional feet with step-backs.</li>
+        <li>Set-aside of 11% Extremely Low, 15% Very Low or 25% Lower Income units.</li>
+        <li>A 65-unit Subarea C Tier 4 filing on 14,006 SF at 1136 N Vermont shows the program in use on this corridor.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~92-94</span></div>
+      <div class="pmetric"><span class="l">Affordable</span><span class="v">11-25%</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Mixed-income developer</span></div>
+    </div>
+    <div class="path-card pe">
+      <div class="ph">
+        <div class="ptag">Pathway C &middot; State Law</div>
+        <div class="pname">State Density Bonus + AB 1287</div>
+        <div class="punits">About 78 to 104 units</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>A 50% bonus on the 52-unit base yields about 78 units with 15% Very Low Income units.</li>
+        <li>AB 1287 stacks a second bonus for additional Very Low or Moderate units, up to about 104 units.</li>
+        <li>Moderate Income units can be for-sale, which opens a condominium exit.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~78-104</span></div>
+      <div class="pmetric"><span class="l">Affordable</span><span class="v">15% VLI +</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Rental or condo builder</span></div>
+    </div>
+    <div class="path-card pf">
+      <div class="ph">
+        <div class="ptag">Pathway D &middot; Mixed Income</div>
+        <div class="pname">CHIP Mixed Income (MIIP)</div>
+        <div class="punits">About 110 to 115 units</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>The T-3 Transit Oriented Incentive Area allows a 120% density increase, 4.5:1 FAR and 33 additional feet of height.</li>
+        <li>Set-aside of 13% Extremely Low, 17% Very Low or 27% Lower Income units; the rest are market rate.</li>
+        <li>CHIP overrides the SNAP density and FAR limits, and AB 2097 removes required parking. The highest market-rate unit count on the site.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~110-115</span></div>
+      <div class="pmetric"><span class="l">Affordable</span><span class="v">13-27%</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Mixed-income developer</span></div>
+    </div>
+    <div class="path-card pd">
+      <div class="ph">
+        <div class="ptag">Pathway E &middot; 100% Affordable</div>
+        <div class="pname">CHIP Affordable (AHIP)</div>
+        <div class="punits">About 130 to 180 units</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>Density follows the buildable envelope rather than the base zone: about 4.65:1 FAR, roughly 95,000 SF, plus 33 feet.</li>
+        <li>Ministerial approval under the City's permanent affordable program.</li>
+        <li>QCT status for 2026 and 2027 and the station location support tax-credit and bond financing.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~130-180</span></div>
+      <div class="pmetric"><span class="l">Affordable</span><span class="v">100%</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Tax-credit developer</span></div>
+    </div>
+    <div class="path-card pg">
+      <div class="ph">
+        <div class="ptag">Pathway F &middot; 100% Affordable</div>
+        <div class="pname">Executive Directive 1</div>
+        <div class="punits">About 130 to 180 units</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>ZIMAS lists the site as an ED 1 "Eligible Site": 100% affordable projects get ministerial approval on an expedited timeline.</li>
+        <li>A similar envelope to AHIP; the 72-unit supportive housing building across Juanita is the neighborhood precedent.</li>
+        <li>Suits privately financed affordable and supportive housing sponsors.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~130-180</span></div>
+      <div class="pmetric"><span class="l">Affordable</span><span class="v">100%</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Affordable sponsor</span></div>
+    </div>
+    <div class="path-card ph2">
+      <div class="ph">
+        <div class="ptag">Pathway G &middot; Commercial Corridor</div>
+        <div class="pname">AB 2011 / SB 6</div>
+        <div class="punits">About 32 to 48 units (Vermont parcel)</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>State law allows housing by right on commercially zoned corridor parcels, so it applies to the C2 Vermont parcel only.</li>
+        <li>Ministerial approval up to 65 feet, with State Density Bonus stacking available.</li>
+        <li>Holos Communities is using AB 2011 for its 113-unit, 100% affordable filing directly across Vermont.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~32-48</span></div>
+      <div class="pmetric"><span class="l">Approval</span><span class="v">Ministerial</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Affordable / mixed</span></div>
+    </div>
+    <div class="path-card pc">
+      <div class="ph">
+        <div class="ptag">Pathway H &middot; Adaptive Reuse</div>
+        <div class="pname">Convert and Build</div>
+        <div class="punits">About 25 to 35 units in the building</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>The site is inside the Citywide Adaptive Reuse Program area, so the 25,100 SF building can convert to housing without demolition.</li>
+        <li>New construction on the Juanita parcel and the Vermont parking area can be added through MIIP.</li>
+        <li>An owner-user or institutional buyer can also keep the building in its current educational use.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">~25-35 + new</span></div>
+      <div class="pmetric"><span class="l">Demolition</span><span class="v">None</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Value-add / user</span></div>
+    </div>
+  </div>
+  <h3>Pathways Side by Side</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th>Pathway</th><th class="num">Units</th><th class="num">FAR</th><th>Height</th><th>Affordable Set-Aside</th><th>Approval</th></tr>
+    <tr><td>A &middot; SNAP mixed-use</td><td class="num">~51</td><td class="num">3.45:1</td><td>75 ft</td><td>None</td><td>By right</td></tr>
+    <tr><td>B &middot; TOC Tier 4</td><td class="num">~92-94</td><td class="num">~4.35:1</td><td>+33 ft</td><td>11% ELI, 15% VLI or 25% LI</td><td>Administrative</td></tr>
+    <tr><td>C &middot; State Density Bonus + AB 1287</td><td class="num">~78-104</td><td class="num">Incentive</td><td>Incentive</td><td>15% VLI, plus stacked units</td><td>Administrative</td></tr>
+    <tr><td>D &middot; CHIP MIIP</td><td class="num">~110-115</td><td class="num">4.5:1</td><td>+33 ft</td><td>13% ELI, 17% VLI or 27% LI</td><td>Ministerial</td></tr>
+    <tr><td>E &middot; CHIP AHIP</td><td class="num">~130-180</td><td class="num">~4.65:1</td><td>+33 ft</td><td>100%</td><td>Ministerial</td></tr>
+    <tr><td>F &middot; ED 1</td><td class="num">~130-180</td><td class="num">Envelope</td><td>Envelope</td><td>100%</td><td>Ministerial, expedited</td></tr>
+    <tr><td>G &middot; AB 2011 / SB 6 (Vermont only)</td><td class="num">~32-48</td><td class="num">State</td><td>65 ft</td><td>Varies by project</td><td>Ministerial</td></tr>
+    <tr><td>H &middot; Adaptive reuse</td><td class="num">~25-35 + new</td><td class="num">Existing</td><td>Existing</td><td>None for conversion</td><td>Administrative</td></tr>
+  </table>
+  </div>
+  <div class="info-callout"><strong>How to read these:</strong> Pathway A is the by-right baseline. Pathways B through D are mixed-income routes, and MIIP (D) delivers the most market-rate units because the T-3 incentive area roughly doubles density. Pathways E and F are the 100% affordable routes, which reach about three times the by-right count and draw on the site's QCT status and station location. Pathway G uses state law on the Vermont parcel alone, the route Holos took across the street. Pathway H keeps the existing building in play for a buyer who would rather convert than demolish, or for an institutional user. The price recommendation is supported by B through F, the routes most buyers will underwrite.</div>
+  <div class="info-callout"><strong>Diligence notes:</strong> The Vermont parcel is within the Metro rail right-of-way zone (ZI-1117), so excavation near the B Line tunnel needs Metro review. Both parcels are in a Methane Buffer Zone and carry the City's freeway-adjacent advisory notice (ZI-2427); neither is in a liquefaction or fault zone. ZIMAS flags Housing Element replacement review on both parcels, while also showing no housing use in the last five years. The parking lot at 315 N Juanita, which notches into the rear of the site, sold in December 2024; adding it would square the site at about 28,000 SF.</div>
+</section>
+
+<section class="card" id="comps">
+  <h2>Land Sales Comparables</h2>
+  <p>Twelve closed development and redevelopment sites within two miles, all recorded between December 2024 and August 2026. The two closest sales, on the subject's own corner, lead the set.</p>
+  <div class="img-frame" style="aspect-ratio:640/420;margin-bottom:14px;background:#fff"><img src="images/comp_map.png" alt="Map of the subject and twelve land sale comparables"></div>
+  <div class="caption" style="margin-top:-6px;margin-bottom:10px">S is the subject. A and B sit on the subject's block and directly across Vermont.</div>
+  <div class="table-scroll">
+  <table>
+    <tr><th>#</th><th>Address</th><th>Zoning</th><th class="num">Lot SF</th><th class="num">Sale Price</th><th class="num">$/Land SF</th><th>Closed</th><th class="num">Dist.</th></tr>
+    <tr><td>S</td><td><b>320 N Vermont + 321 N Juanita (subject, at list price)</b></td><td>C2 / R4</td><td class="num">20,517</td><td class="num">$6,250,000</td><td class="num"><span class="psf">$304.63</span></td><td>Proposed</td><td class="num"></td></tr>
+    <tr><td>A</td><td>311-315 N Juanita Ave + 3755 Beverly Blvd</td><td>C2 / CM</td><td class="num">24,123</td><td class="num">$7,900,000</td><td class="num"><span class="psf hot">$327.49</span></td><td><span class="b-closed">Dec 2024</span></td><td class="num">Same block</td></tr>
+    <tr><td>B</td><td>315 N Vermont Ave</td><td>C2</td><td class="num">12,420</td><td class="num">$4,000,000</td><td class="num"><span class="psf hot">$322.06</span></td><td><span class="b-closed">Jan 2025</span></td><td class="num">Across Vermont</td></tr>
+    <tr><td>C</td><td>825-837 Hyperion Ave, Silver Lake</td><td>R3</td><td class="num">22,546</td><td class="num">$5,277,000</td><td class="num"><span class="psf">$234.05</span></td><td><span class="b-closed">Jun 2026</span></td><td class="num">0.8 mi</td></tr>
+    <tr><td>D</td><td>308-314 S Harvard Blvd</td><td>R3</td><td class="num">36,684</td><td class="num">$7,000,000</td><td class="num"><span class="psf">$190.82</span></td><td><span class="b-closed">Apr 2026</span></td><td class="num">0.9 mi</td></tr>
+    <tr><td>E</td><td>544 S Mariposa Ave</td><td>C2</td><td class="num">7,500</td><td class="num">$2,025,000</td><td class="num"><span class="psf">$270.00</span></td><td><span class="b-closed">Mar 2025</span></td><td class="num">1.0 mi</td></tr>
+    <tr><td>F</td><td>335 S Rampart Blvd</td><td>R4</td><td class="num">16,262</td><td class="num">$3,300,000</td><td class="num"><span class="psf">$202.93</span></td><td><span class="b-closed">Aug 2026</span></td><td class="num">1.0 mi</td></tr>
+    <tr><td>G</td><td>4705-4709 Elmwood Ave</td><td>C2</td><td class="num">14,499</td><td class="num">$3,050,000</td><td class="num"><span class="psf">$210.36</span></td><td><span class="b-closed">Nov 2025</span></td><td class="num">1.1 mi</td></tr>
+    <tr><td>H</td><td>4718-4726 Oakwood Ave</td><td>R3</td><td class="num">22,253</td><td class="num">$4,700,000</td><td class="num"><span class="psf">$211.21</span></td><td><span class="b-closed">Mar 2026</span></td><td class="num">1.1 mi</td></tr>
+    <tr><td>I</td><td>1141-1155 N Vermont Ave</td><td>C2</td><td class="num">17,533</td><td class="num">$4,950,000</td><td class="num"><span class="psf">$282.32</span></td><td><span class="b-closed">Aug 2025</span></td><td class="num">1.1 mi</td></tr>
+    <tr><td>J</td><td>4623-4631 Beverly Blvd</td><td>C2</td><td class="num">20,999</td><td class="num">$4,975,000</td><td class="num"><span class="psf">$236.92</span></td><td><span class="b-closed">Jul 2026</span></td><td class="num">1.1 mi</td></tr>
+    <tr><td>K</td><td>2007 W Reservoir St, Echo Park</td><td>R4</td><td class="num">19,750</td><td class="num">$3,675,000</td><td class="num"><span class="psf">$186.08</span></td><td><span class="b-closed">Jan 2026</span></td><td class="num">1.7 mi</td></tr>
+    <tr><td>L</td><td>4155 Wilshire Blvd</td><td>CR</td><td class="num">22,376</td><td class="num">$4,990,000</td><td class="num"><span class="psf">$223.01</span></td><td><span class="b-closed">Feb 2025</span></td><td class="num">1.9 mi</td></tr>
+    <tr class="avg"><td></td><td>Average (comps A-L)</td><td></td><td class="num">19,745</td><td class="num">$4,653,500</td><td class="num">$241.44</td><td></td><td></td></tr>
+  </table>
+  </div>
+  <p class="fn">Lot sizes, recorded prices and closing dates verified against LA County Assessor transfer records, October 2026, except comp C, whose price and date match the recorded grant deed (assessor record not yet posted). $/SF is the recorded price over assessor lot area. Comp A includes a 14,356 SF school building. Comp B was bought by a Holos Communities affiliate, which has filed a 113-unit affordable building under AB 2011 ($35,398 per unit). Comp C closed Ready-to-Issue for 105 affordable units ($50,257 per unit). Comp H closed Ready-to-Issue for a 128-bed assisted living project. Comp J is an LAAA Team sale, bought unentitled for a mixed-income project. Comp F followed a 2024 trustee sale of the same parcel, and comp K sold below its 2019 price. Median of the set: $228.53 per SF.</p>
+  <h3>Active Land Listings Nearby</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th>Address</th><th>Zoning</th><th class="num">Lot SF</th><th class="num">Asking</th><th class="num">$/Land SF</th><th>Notes</th><th class="num">Dist.</th></tr>
+    <tr><td>4100 Melrose Ave</td><td>C2-1</td><td class="num">15,004</td><td class="num">$3,300,000</td><td class="num"><span class="psf">$219.94</span></td><td>Listed as entitled for 33 units; lender took title 01/2026</td><td class="num">0.5 mi</td></tr>
+    <tr><td>311 S Berendo St</td><td>C2</td><td class="num">7,153</td><td class="num">$1,895,000</td><td class="num"><span class="psf">$264.92</span></td><td>MIIP upside per listing</td><td class="num">0.6 mi</td></tr>
+    <tr><td>1108 Manzanita St</td><td>RD2</td><td class="num">7,688</td><td class="num">$2,250,000</td><td class="num"><span class="psf">$292.66</span></td><td>54 affordable units, Ready-to-Issue</td><td class="num">1.3 mi</td></tr>
+    <tr><td>2811 San Marino St</td><td>R4</td><td class="num">8,101</td><td class="num">$1,995,000</td><td class="num"><span class="psf">$246.27</span></td><td>Improved with a 1958 fourplex</td><td class="num">1.5 mi</td></tr>
+  </table>
+  </div>
+  <p class="fn">Asking prices as advertised, October 2026; status to be confirmed with each listing broker. Lot sizes per LA County Assessor.</p>
+</section>
+
+<section class="card" id="takeaways">
+  <h2>Key Takeaways</h2>
+  <div class="tk-grid">
+    <div class="tk"><span class="n">1</span><br><b>The corner has already priced above $320 per SF.</b> The two sales on the subject's own corner closed at $327.49 and $322.06 per land SF, about $80 above the two-mile average of $241.44.</div>
+    <div class="tk"><span class="n">2</span><br><b>Affordable capital is buying here.</b> The sale across Vermont went to an affordable developer now filing 113 units, and a 72-unit supportive housing building just opened across Juanita. QCT status supports the tax-credit math.</div>
+    <div class="tk"><span class="n">3</span><br><b>Station proximity drives density.</b> At about 120 feet from the B Line, the site sits in the T-3 incentive area, where a mixed-income project roughly doubles the by-right unit count with no required parking.</div>
+    <div class="tk"><span class="n">4</span><br><b>The building gives a second buyer pool.</b> The 25,100 SF building can convert under the Adaptive Reuse Program or serve an institutional user, which most of the comparables did not offer.</div>
+    <div class="tk"><span class="n">5</span><br><b>Measure ULA shapes the price.</b> Above $5,400,000 the City's transfer tax is 4% of the full price, so a sale between $5,400,001 and $5,625,000 nets the seller less than a sale at $5,400,000.</div>
+  </div>
+</section>
+
+<section class="card" id="pricing">
+  <h2>Pricing Recommendation</h2>
+  <div class="recommend">
+    <div class="r-eyebrow">Recommended List Price</div>
+    <div class="r-band">$6,250,000</div>
+    <div class="r-sub">$304.63 per land SF on 20,517 SF &middot; about $55,800 per unit on a 112-unit mixed-income project</div>
+  </div>
+  <div class="price-compare">
+    <div class="pc-box"><div class="l">Per Land SF</div><div class="v">$304.63</div><div class="s">Same-corner sales $322-$327; two-mile average $241</div></div>
+    <div class="pc-box"><div class="l">Per Unit, MIIP</div><div class="v">~$55,800</div><div class="s">On ~112 units</div></div>
+    <div class="pc-box"><div class="l">Per Unit, 100% Affordable</div><div class="v">~$40,300</div><div class="s">On ~155 units; 315 N Vermont $35,398</div></div>
+    <div class="pc-box"><div class="l">Measure ULA at List</div><div class="v">$250,000</div><div class="s">4% of price; seller nets $6,000,000 before other costs</div></div>
+  </div>
+  <p>The list price is anchored to the two sales on the subject's own corner, discounted from their $322 to $327 per SF to reflect the cost of removing or converting the existing building and the site's L shape. It sits well above the two-mile average of $241.44 per SF because those comparables are farther from the station and mostly outside the T-3 incentive area. Measured the way buyers underwrite it, $6,250,000 is about $55,800 per unit on a mixed-income project and about $40,300 per unit on a 100% affordable building, in line with what affordable sponsors paid across the street and in Silver Lake.</p>
+  <p>Measure ULA sets a floor on the useful price range. Any price from $5,400,001 to $5,625,000 nets the seller less than a $5,400,000 sale, so an offer in that band should be countered either to $5,400,000 or above $5,625,000. At list, the transfer tax is about $250,000 and the seller nets $6,000,000 before commissions and other costs.</p>
+</section>
+
+<section class="card" id="marketing">
+  <h2>Marketing Reach</h2>
+  <p>Every LAAA Team exclusive listing is syndicated across 10 listing platforms, backed by direct outreach to our database of multifamily developers, affordable housing sponsors, tax-credit developers and institutional users.</p>
+  <div class="plat-strip">
+    <span class="plat">The MLS</span>
+    <span class="plat">CoStar / LoopNet</span>
+    <span class="plat">Crexi</span>
+    <span class="plat">Brevitas</span>
+    <span class="plat">Zillow</span>
+    <span class="plat">Redfin</span>
+    <span class="plat">ApartmentBuildings.com</span>
+    <span class="plat">Duxre</span>
+    <span class="plat">MarcusMillichap.com</span>
+    <span class="plat">www.laaa.com</span>
+  </div>
+</section>
+
+<section class="card" id="listings">
+  <h2>Also Marketed by the LAAA Team</h2>
+  <p>The LAAA Team is currently marketing 8 land and development-site listings across Southern California. Each card links to the full offering at www.laaa.com.</p>
+  <div class="inv-grid">
+    <a class="inv-item" href="https://www.laaa.com/om/5151-e-arrow" target="_blank" rel="noopener"><span class="addr">5151 E Arrow Hwy</span><span class="city">Montclair</span><span class="price">$10,250,000</span><span class="facts">300 buildable units &middot; 260,271 SF (5.97 ac)</span><span class="desc">Unentitled 300-unit mixed-density apartment and townhome site in the North Montclair Downtown Specific Plan.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/2600-s-robertson" target="_blank" rel="noopener"><span class="addr">2600 S Robertson Blvd</span><span class="city">Los Angeles</span><span class="price">$7,995,000</span><span class="facts">149 entitled units &middot; 16,220 SF</span><span class="desc">ED1 100% affordable mixed-use approval, 149 units over ground-floor retail at a 3.9:1 FAR.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/185-monterey" target="_blank" rel="noopener"><span class="addr">185 Monterey Rd</span><span class="city">South Pasadena</span><span class="price">$7,000,000</span><span class="facts">53 entitled units &middot; 54,794 SF (1.26 ac)</span><span class="desc">Fully entitled 53-unit condominium development, tract map approved June 2026.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/12335-osborne" target="_blank" rel="noopener"><span class="addr">12335 Osborne Pl</span><span class="city">Pacoima</span><span class="price">$3,950,000</span><span class="facts">293 RTI units &middot; 46,035 SF (1.06 ac)</span><span class="desc">Ready-to-Issue 293-unit ED1 affordable development in an Opportunity Zone, zero required parking.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/13840-sherman" target="_blank" rel="noopener"><span class="addr">13840 Sherman Way</span><span class="city">Van Nuys</span><span class="price">$3,500,000</span><span class="facts">86 RTI units &middot; 1.05 acres</span><span class="desc">AB 2334 density bonus affordable site delivered Ready-to-Issue at close of escrow, no parking required.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/1656-sawtelle" target="_blank" rel="noopener"><span class="addr">1656 Sawtelle Blvd</span><span class="city">Los Angeles</span><span class="price">$2,995,000</span><span class="facts">38 buildable units, up to ~52 with bonus &middot; 7,005 SF</span><span class="desc">Cleared, unentitled West LA (Little Osaka) apartment site, ~38 units via MIIP, ~52 via AB 1287/AHIP.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/631-637-w-6th" target="_blank" rel="noopener"><span class="addr">631-637 W 6th Street</span><span class="city">San Pedro</span><span class="price">$1,475,000</span><span class="facts">10 buildable units &middot; 13,799 SF</span><span class="desc">Two-parcel by-right site: SB 1123 for-sale subdivision or duplexes plus ADUs.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/6901-woodman" target="_blank" rel="noopener"><span class="addr">6901 Woodman Avenue</span><span class="city">Van Nuys</span><span class="price">$1,400,000</span><span class="facts">55 RTI units &middot; 10,005 SF</span><span class="desc">RTI 55-unit ED1/TOC affordable land, permits ready to pull.</span><span class="go">View Listing</span></a>
+  </div>
+  <p class="fn">Active laaa.com land listings as of October 16, 2026, excluding properties in escrow.</p>
+</section>
+
+
+<section class="card" id="team">
+  <h2>The LAAA Team</h2>
+  <div class="team-leaders">
+    <div class="leader">
+      <img class="headshot-img-lg" src="images/headshot_filip-niculete.jpg" alt="Filip Niculete">
+      <div class="nm">Filip Niculete</div>
+      <div class="tt">Senior Managing Director Investments</div>
+      <div class="ct">(818) 212-2748 &middot; CA DRE 01905352</div>
+    </div>
+    <div class="leader">
+      <img class="headshot-img-lg" src="images/headshot_glen-scher.jpg" alt="Glen Scher">
+      <div class="nm">Glen Scher</div>
+      <div class="tt">Senior Managing Director Investments</div>
+      <div class="ct">(818) 212-2808 &middot; CA DRE 01962976</div>
+    </div>
+  </div>
+  <div class="team-roster">
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_aida-memary-scher.jpg" alt="Aida Memary Scher"><div class="nm">Aida Memary Scher</div><div class="tt">Associate Director Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_morgan-wetmore.jpg" alt="Morgan Wetmore"><div class="nm">Morgan Wetmore</div><div class="tt">Associate</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_alexandro-tapia.jpg" alt="Alexandro Tapia"><div class="nm">Alexandro Tapia</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_logan-ward.jpg" alt="Logan Ward"><div class="nm">Logan Ward</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_luka-leader.jpg" alt="Luka Leader"><div class="nm">Luka Leader</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_blake-lewitt.jpg" alt="Blake Lewitt"><div class="nm">Blake Lewitt</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_mike-palade.jpg" alt="Mike Palade"><div class="nm">Mike Palade</div><div class="tt">Agent Assistant</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_tony-dang.jpg" alt="Tony H. Dang"><div class="nm">Tony H. Dang</div><div class="tt">Business Operations Manager</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_tirajeh-vossoughi-horton.jpg" alt="Tirajeh Vossoughi-Horton"><div class="nm">Tirajeh Vossoughi-Horton</div><div class="tt">Investment Brokerage Intern</div></div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-title">Marcus &amp; Millichap | The LAAA Team</div>
+    <p>16830 Ventura Blvd, Suite 100, Encino, CA 91436 &middot; www.laaa.com</p>
+    <p>This Broker Opinion of Value is not an appraisal and has been prepared for the exclusive use of the party to whom it is addressed. The information contained herein was obtained from sources we believe to be reliable; however, Marcus &amp; Millichap makes no guarantee, warranty, or representation as to its accuracy or completeness. Development potential, unit counts, and program eligibility are planning-level estimates only and must be independently verified with the City of Los Angeles, an architect, and land-use counsel. Map and aerial imagery &copy; Google.</p>
+  </div>
+</footer>
+
+</body>
+</html>
